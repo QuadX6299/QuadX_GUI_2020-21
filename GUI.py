@@ -11,16 +11,16 @@ def main():
             self.name = name
             self.x = x1
             self.y = y2
-            # D:\download\Goal\image_part_***
             self.y1 = y2 + 1 + (10 * self.x)
+            # Goal
             if self.y1 < 10:
-                self.image = "D:/download/Goal/image_part_00%s.jpg" % self.y1
+                self.image = "Goal/image_part_00%s.jpg" % self.y1
             elif 10 <= self.y1 < 100:
-                self.image = "D:/download/Goal/image_part_0%s.jpg" % self.y1
+                self.image = "Goal/image_part_0%s.jpg" % self.y1
             elif 100 <= self.y1 < 150:
-                self.image = "D:/download/Goal/image_part_%s.jpg" % self.y1
+                self.image = "Goal/image_part_%s.jpg" % self.y1
             else:
-                self.image = "D:/download/Goal/image_part_150.jpg"
+                self.image = "Goal/image_part_150.jpg"
 
             self.photo = ImageTk.PhotoImage(Image.open(self.image))
             vars()["%s" % name] = Button(root, text="     ", image=self.photo, relief=FLAT, command=lambda: self.turnX())
