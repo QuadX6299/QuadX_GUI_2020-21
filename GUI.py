@@ -23,7 +23,7 @@ def main():
                 self.image = "Goal/image_part_150.jpg"
 
             self.photo = ImageTk.PhotoImage(Image.open(self.image))
-            vars()["%s" % name] = Button(root, text="     ", image=self.photo, relief=FLAT, command=lambda: self.turnX())
+            vars()["%s" % name] = Button(root, text="     ", image=self.photo, command=lambda: self.turnX())
             vars()["%s" % name].grid(row=x, column=y)
 
         def turnX(self):
@@ -37,12 +37,12 @@ def main():
             reset1.pack(side=RIGHT)
 
         def conf(self):
-            vars()["%s" % self.name] = Button(root, text="     ", image=self.photo, relief=FLAT, command=lambda: self.turnX())
+            vars()["%s" % self.name] = Button(root, text="     ", image=self.photo, command=lambda: self.turnX())
             vars()["%s" % self.name].grid(row=self.x, column=self.y)
             self.confi.destroy()
 
         def reset(self):
-            vars()["%s" % self.name] = Button(root, text="     ", image=self.photo, relief=FLAT, command=lambda: self.turnX())
+            vars()["%s" % self.name] = Button(root, text="     ", image=self.photo, command=lambda: self.turnX())
             vars()["%s" % self.name].grid(row=self.x, column=self.y)
             self.confi.destroy()
 
