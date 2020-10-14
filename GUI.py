@@ -1,6 +1,8 @@
 from tkinter import *
 from PIL import ImageTk, Image
 
+# You'll need to install the module PIl also called Pillow
+# Do "pip install Pillow" to install it
 
 def main():
     root = Tk()
