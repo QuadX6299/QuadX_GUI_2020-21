@@ -1,4 +1,5 @@
 from tkinter import *
+import csv
 from PIL import ImageTk, Image
 
 # You'll need to install the module PIl also called Pillow
@@ -38,9 +39,11 @@ def main():
             self.confi = Tk()
             self.confi.title('Confirm')
             confirm = Button(self.confi, text="Confirm", command=lambda: self.conf())
-            confirm.pack(side=LEFT)
+            confirm.pack(side=TOP)
             reset1 = Button(self.confi, text="Reset", command=lambda: self.reset())
-            reset1.pack(side=RIGHT)
+            reset1.pack(side=TOP)
+            finish = Button(self.confi, text="Confirm and Finish", fg="red", command=lambda: self.finish())
+            finish.pack(side=BOTTOM)
 
         def conf(self):
             vars()["%s" % self.name] = Button(root, text="     ", image=self.photo, command=lambda: self.turnX())
@@ -68,6 +71,18 @@ def main():
             print(make2)
             print(make3)
             print(miss)
+
+        def finish(self):
+            self.conf()
+            with open('Score.csv', 'w', newline='') as csvfile:
+                writer = csv.writer(csvfile, delimiter=' ', quoting=csv.QUOTE_MINIMAL)
+                writer.writerow(['Make 1:'] + make1)
+                writer.writerow(['Make 2:'] + make2)
+                writer.writerow(['Make 3:'] + make3)
+                writer.writerow(['Miss:'] + miss)
+
+            root.destroy()
+
 
     for x in range(17):
         for y in range(10):
