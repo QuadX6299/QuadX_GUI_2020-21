@@ -8,9 +8,9 @@ from PIL import ImageTk, Image
 def main():
     root = Tk()
     root.title('QuadX GUI')
-    make1 = []
-    make2 = []
-    make3 = []
+    highGoal = []
+    midGoal = []
+    lowGoal = []
     miss = []
 
     class Position:
@@ -50,14 +50,14 @@ def main():
             vars()["%s" % self.name].grid(row=self.y, column=self.x)
             self.confi.destroy()
             if 1 < self.x < 8 and self.y == 5:
-                print("Make: (%s, %s)" %(self.x, self.y))
-                make1.append("(%s, %s)" % (self.x, self.y))
+                print("High Goal Makes: (%s, %s)" %(self.x, self.y))
+                highGoal.append("(%s, %s)" % (self.x, self.y))
             elif 0 < self.x < 9 and 6 < self.y < 11:
-                print("Make 2: (%s, %s)" % (self.x, self.y))
-                make2.append("(%s, %s)" % (self.x, self.y))
+                print("Mid Goal Makes : (%s, %s)" % (self.x, self.y))
+                midGoal.append("(%s, %s)" % (self.x, self.y))
             elif 0 < self.x < 9 and 11 < self.y < 15:
-                print("Make 3: (%s, %s)" % (self.x, self.y))
-                make3.append("(%s, %s)" % (self.x, self.y))
+                print("Low Goal Makes: (%s, %s)" % (self.x, self.y))
+                lowGoal.append("(%s, %s)" % (self.x, self.y))
             else:
                 print("Miss: (%s, %s)" % (self.x, self.y))
                 miss.append("(%s, %s)" % (self.x, self.y))
@@ -67,18 +67,18 @@ def main():
             vars()["%s" % self.name] = Button(root, text="     ", image=self.photo, borderwidth=0, command=lambda: self.turnX())
             vars()["%s" % self.name].grid(row=self.y, column=self.x)
             self.confi.destroy()
-            print(make1)
-            print(make2)
-            print(make3)
+            print(highGoal)
+            print(midGoal)
+            print(lowGoal)
             print(miss)
 
         def finish(self):
             self.conf()
             with open('Score.csv', 'w', newline='') as csvfile:
                 writer = csv.writer(csvfile, delimiter=' ', quoting=csv.QUOTE_MINIMAL)
-                writer.writerow(['Make 1:'] + make1)
-                writer.writerow(['Make 2:'] + make2)
-                writer.writerow(['Make 3:'] + make3)
+                writer.writerow(['High Goal Makes:'] + highGoal)
+                writer.writerow(['Mid Goal Makes:'] + midGoal)
+                writer.writerow(['Low Goal Makes:'] + lowGoal)
                 writer.writerow(['Miss:'] + miss)
 
             root.destroy()
