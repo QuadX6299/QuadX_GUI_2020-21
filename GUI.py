@@ -34,7 +34,7 @@ def callback(event):
         writer.writerow(['Miss:'] + miss)
 
 
-photo = "C:/Users/luqui/Downloads/Goal.png"
+photo = "Goal.png"
 goal = ImageTk.PhotoImage(Image.open(photo))
 root.title('QuadX GUI')
 
