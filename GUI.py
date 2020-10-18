@@ -2,6 +2,9 @@ from tkinter import *
 from PIL import ImageTk, Image
 import csv
 
+# You'll need to install the module called Pillow
+# do "pip install Pillow"
+
 root = Tk()
 highGoal = []
 midGoal = []
@@ -13,6 +16,7 @@ def key(event):
 
 
 def callback(event):
+    lbl = Label(canvas, image=ImageTk.PhotoImage(Image.open("dot.jpg"))).place(x=event.x, y=event.y)
     if 68 < event.x < 320 and 175 < event.y < 250:
         print("High Goal Makes: (%s, %s)" % (event.x, event.y))
         highGoal.append("(%s, %s)" % (event.x, event.y))
