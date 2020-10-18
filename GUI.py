@@ -1,10 +1,11 @@
 from tkinter import *
 from PIL import ImageTk, Image
 import csv
+from numpy import double
 
 # You'll need to install the module called Pillow
 # do "pip install Pillow"
-from numpy import double
+
 root = Tk()
 highGoal = []
 midGoal = []
@@ -16,19 +17,26 @@ def key(event):
 
 
 def callback(event):
-    lbl = Label(canvas, image=ImageTk.PhotoImage(Image.open("dot.jpg"))).place(x=event.x, y=event.y)
     if 68 < event.x < 320 and 175 < event.y < 250:
         print("High Goal Makes: (%s, %s)" % (event.x, event.y))
         highGoal.append("(%s, %s)" % (event.x, event.y))
+        make = Label(canvas, text="", fg="green", bg="green", image=ImageTk.PhotoImage(Image.open("dot.jpg"))).place(
+            x=event.x, y=event.y)
     elif 40 < event.x < 340 and 265 < event.y < 420:
         print("Mid Goal Makes : (%s, %s)" % (event.x, event.y))
         midGoal.append("(%s, %s)" % (event.x, event.y))
+        make = Label(canvas, text="", fg="green", bg="green", image=ImageTk.PhotoImage(Image.open("dot.jpg"))).place(
+            x=event.x, y=event.y)
     elif 40 < event.x < 340 and 460 < event.y < 565:
         print("Low Goal Makes: (%s, %s)" % (event.x, event.y))
         lowGoal.append("(%s, %s)" % (event.x, event.y))
+        make = Label(canvas, text="", fg="green", bg="green", image=ImageTk.PhotoImage(Image.open("dot.jpg"))).place(
+            x=event.x, y=event.y)
     else:
         print("Miss: (%s, %s)" % (event.x, event.y))
         miss.append("(%s, %s)" % (event.x, event.y))
+        redmiss = Label(canvas, text="", fg="red", bg="red", image=ImageTk.PhotoImage(Image.open("dot.jpg"))).place(
+            x=event.x, y=event.y)
 
     with open('Score.csv', 'w', newline='') as csvfile:
         writer = csv.writer(csvfile, delimiter=' ', quoting=csv.QUOTE_MINIMAL)
