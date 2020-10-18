@@ -4,6 +4,7 @@ import csv
 
 # You'll need to install the module called Pillow
 # do "pip install Pillow"
+from numpy import double
 
 root = Tk()
 highGoal = []
@@ -49,3 +50,9 @@ canvas.pack()
 canvas.create_image(0, 0, image=goal, anchor=NW)
 
 root.mainloop()
+
+totalMakes = len(highGoal) + len(midGoal) + len(lowGoal)
+totalShots = len(miss) + totalMakes
+shootingAccuracy = (double) (totalMakes/(totalShots))
+
+print("Shooting Accuracy: " + "{:.2%}".format(shootingAccuracy))
