@@ -3,8 +3,10 @@ from PIL import ImageTk, Image
 import csv
 from numpy import double
 
-# You'll need to install the module called Pillow
+# You'll need to install the module called Pillow and numpy
 # do "pip install Pillow"
+# then "pip install numpy"
+
 
 root = Tk()
 highGoal = []
