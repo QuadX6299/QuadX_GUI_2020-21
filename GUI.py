@@ -1,3 +1,5 @@
+import gspread 
+from oauth2client.service_account import ServiceAccountCredentials
 from tkinter import *
 from PIL import ImageTk, Image
 import csv
@@ -7,12 +9,16 @@ from numpy import double
 # do "pip install Pillow"
 # then "pip install numpy"
 
+scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
+creds = ServiceAccountCredentials.from_json_keyfile_name("creds.json", scope)
+client = gspread.authorize(creds)
+sheet = client.open("QuadX GUI").sheet1
 
 root = Tk()
-highGoal = []
-midGoal = []
-lowGoal = []
-miss = []
+highGoal = ["High Goal Makes:"]
+midGoal = ['Mid Goal Makes:']
+lowGoal = ['Low Goal Makes:']
+miss = ['Miss:']
 
 def key(event):
     print("pressed", repr(event.char))
@@ -42,10 +48,14 @@ def callback(event):
 
     with open('Score.csv', 'w', newline='') as csvfile:
         writer = csv.writer(csvfile, delimiter=' ', quoting=csv.QUOTE_MINIMAL)
-        writer.writerow(['High Goal Makes:'] + highGoal)
-        writer.writerow(['Mid Goal Makes:'] + midGoal)
-        writer.writerow(['Low Goal Makes:'] + lowGoal)
-        writer.writerow(['Miss:'] + miss)
+        writer.writerow(highGoal)
+        writer.writerow(midGoal)
+        writer.writerow(lowGoal)
+        writer.writerow(miss)
+        sheet.insert_row(highGoal, 1)
+        sheet.insert_row(midGoal, 2)
+        sheet.insert_row(lowGoal, 3)
+        sheet.insert_row(miss, 4)
 
 
 photo = "Goal.png"

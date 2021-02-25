@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "quadxgui",
+  "private_key_id": "fdf687364473c8c87648c22ef13aa7c0769323ef",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDNEwVp+k8RltEo\nyxvzCaXROTM1J7MwB+20YVtl+Es9Edh3jWPqmbjUnmP8jz8gI1AKMsR/RsuqnTvG\nsRSs/K7lNBPyUhXPRDGpZloAuN8nmfjRiDYVply32Eavjsdna4YfEhwDu9LpPLLU\nuYY4bDWKGcOjst8JcpRLW0aljpm30zwHT3KAQ6hNRbLR6MY0XXnRBl1Ip6CFVeCM\nC9yhtGkS0MKyRaYQMjkuwGREJ1HA38rg/lQ0fTe7hhF++g4SkbGePhRvntZ/IT/U\nz2ijpphIo2IMyyrusGYr9UL6GqGNThiPgTbBYfWSgbflxj/iO0IoQcVNA4euv1Gj\ncptkktT9AgMBAAECggEAD0iByJ5PIo7xreTGg6GDmj5KkDASEnF3fXrHTn1SJ3jQ\nf/G+xrRHyjoMVpKwZYCW4vkEnD2rnl6oc/bXhSAxwpgpJ7qGsJMy+551SloncLKb\nZguM3aaFK22ysDu8+vqlnLmDR/iepSORFPnHRHuKrpeb9R5hW+QOTuK8YZ3pMSyq\nayu3ex42j3/TfBWPo7uDwk4xYDyxYw2Tn8eGvdWMgqktn46m4ZbJTlYKCt7i07+A\nM0UQlDkdLI7J18z+dTfOvnPz+wEEcupVM75YfCPi0+kxE4HuCj8etcMR3/xpBlo6\nPraAGbodDdl5cAyY9iMcglWmIkwZgUUFZ328OoxeOwKBgQD+J5/tBXk3t9TMpxau\nUQOaXrnHETpGkyQe9p/KCDxA9lnBW6CNG5FHvy74hjjA8kVz+m69YuICAiFfJY4t\nBR+Rknx5wsNKpbnpa6TZspt5JmPko1efSIXDS8AA7pxKLJEfioxd1ddUNLHNOZrD\ngDI8WnY8/ZO/Dqho6CKIqv97bwKBgQDOkCzB4NcEwaiL4TGWz7JFGsmPIHUVrlrQ\nP+9yqiglTgV6f8jP8oX5BU5l64BIzxwesIr3li0F4x34BUmfHypWTGqZml09NsGU\ne5Zczt4MChe+OqvaeIyMYPmn4gTV9AtBzvT2QplhAy18v/aQevIXrhN9exgfWgKf\n2Vj7FHcwUwKBgQCaNMigM3X9DJkdIzRrx9P70gW+dwF42MZN0y3Yk26bq92BqGqd\ns2BOu/1v5WCCEX16hTSzzE99EHXXGR5OypEA7nSAHGAJ5swKiLmZLPmQZG6vxzve\n9U3T1R5GcoB5sNjM3m+Ub68a9G39Kzpv7FSOsgSTtPf0MJyWKmLpsXcaGQKBgDAj\nZ1rTdCiWnRnkJDNaOdhi8sAZN1ATLvTDQaE+SFbRRPOUXg8gHNq4wtl7tYzCP3Jj\ngC9M3zc1A6HuUYb0s2AjNOCRGdOPNDPPTW5Zg2PY4kmh0LT8TPzWCLh4MtpNomX2\nvh25zZbPL8WX0vU+wbaFCeO/URLVXjE0bMkurswjAoGAKkkKpf3+OpxVh+p3cdoE\nQAamF6kF3QwitATTZ6DUx9FsbvGtbBN9S0+kjxbE29V6BYOiNey2CPuGnsB0+91n\nPcIobCY9K+VktKLQ1Mm8XIL0SxOxvPht21TLR5svaeT6e3DED9DZMTJsq6K/uKer\n+8ojka9iS0eoi044k97fkHo=\n-----END PRIVATE KEY-----\n",
+  "client_email": "quadx-100@quadxgui.iam.gserviceaccount.com",
+  "client_id": "102667907293541084089",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/quadx-100%40quadxgui.iam.gserviceaccount.com"
+}
